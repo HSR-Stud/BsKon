@@ -1,6 +1,9 @@
 Lösungen zu den BsKon Lernzielen
 ================================
 
+Viele Lösungen übernommen aus den Zusammenfassungen von Daniel Ott, Linus
+Betschart und Christof Zellweger auf dem Studentenportal (Danke!).
+
 
 Ein-/Ausgabeverwaltung
 ######################
@@ -8,10 +11,39 @@ Ein-/Ausgabeverwaltung
 **Sie können fünf wesentliche Komponenten der Ein-/Ausgabe(E/A)-Architektur eines
 Betriebssystems benennen.**
 
+- **Systemdienstverteiler:** Wird ein System Service verlangt, benutzt der
+  Service Dispatcher die Servicenummer, um den Funktionspointer auf diesen
+  Service zu erlangen. Beispielsweise wird beim Aufruf von ``NtCreateProcess``
+  in die System Service Table mit Hilfe der ``NtCreateProcess`` Nummer
+  indexiert.
+
+- **E/A-Monitor:** Basisinfo über I/O anzeigen, welche von Administratoren und
+  Entwickler geschrieben werden.
+
+- **E/A-Verteilung:**
+
+- **Treiber- und Geräteverwaltung:**
+
+- **Plug- und Play Verwaltung:** Welche Geräteinfo passt zu welchem Treiber? Auf
+  Harddisk sind viele ungenutzte Treiber installiert.
+
+- **E/A-Datenbasis:** Informationen über aktuell vorhandene Peripheriegeräte,
+  Liste der aktuell installierten Treiber, Ladeanweisungen für installierte
+  Treiber, Installationsanweisungen, Zuordnungstabellen von
+  Geratetypen/-modellen zu Treibern, Zuordnungen von Treibern zu
+  Geräteinstanzen.
+
 ----
 
 **Sie können je einen Vor- und Nachteil einer standardisierten E/A-Schnittstelle
 aufzeigen.**
+
+- **Vorteil:** Anwenderprogramm verwendet standardisierte Funktionen,
+  Betriebssystem macht anschliessend korrekte Umsetzung auf Gerät, d.h.
+  Anwenderprogramm verwendet jeweils nur ``Open()``, ``Close()``, ``Read()`` und
+  ``Write()``, ist also gerateunabhängig; Verwendung von logischen Geräten.
+- **Nachteil:** Beanspruchung von Rechenzeit zur Übersetzung durch dadurch
+  entstehende weitere Abstraktionen.
 
 ----
 
