@@ -1,6 +1,10 @@
 Lösungen zu den BsKon Lernzielen
 ================================
 
+.. |br| raw:: html
+
+   <br />
+
 Viele Lösungen übernommen aus den Zusammenfassungen von Daniel Ott, Linus
 Betschart und Christof Zellweger auf dem Studentenportal (Danke!).
 
@@ -50,10 +54,44 @@ aufzeigen.**
 **Sie können erklären welche Aufgaben die Treiber in einem Betriebssystem
 erfüllen und wie sie sich in das Betriebssystem einfügen.**
 
+Gerätetreiber sind nachinstallierbare Softwarekomponenten eines Betriebssystems
+zur gerätespezifischen Durchführung der Eingabe / Ausgabe.
+
+Aufgaben:
+
+- Treiber konvertieren angelieferte Daten in gerätespezifische Formate und
+  umgekehrt.
+- Sie führen Geräte-/Hardwareansteuerung aus.
+- Sie können Hardwarestatus abfragen (durch Polling oder Interrupts).
+
+Integration in Betriebssystem:
+
+- In Kernelspace oder Userspace
+- Als Treiberhierarchie (Logischer Treiber / Klassentreiber, Physischer Treiber
+  / Gerätetreiber, etc)
+
 ----
 
 **Sie können drei wesentliche Synchronisationsprobleme beim Einsatz von Treibern
 und ihre mögliche Behebung erklären.**
+
+**Problem:**
+
+Während ISR-Ablauf sind Interrupts gleicher und tieferer Priorität gesperrt. Im Einebenen-Unterbrechungssystem betrifft dies alle ISRs.
+
+**Lösung:**
+
+- ISR-Ablauf so kurz wie möglich halten
+- Z.B. Teile der Interrupt-Behandlung auf Benutzerebene verlagern
+- Alternativ Aufteilung der Unterbrechungsbehandlung in zwei Teile. Nicht zeitkritische Teile in Nachbearbeitungsroutine (Linux: SoftIRQ / Tasklet, Windows: DPC) auslagern
+
+**Problem:**
+
+**Lösung:**
+
+**Problem:**
+
+**Lösung:**
 
 ----
 
