@@ -3,10 +3,16 @@ BsKon
 
 Betriebssystemkonzepte.
 
-Hier gibts aktuell nur eine Liste mit Lernzielen und den dazugehörigen
-Lösungen.
+Hier gibts aktuell folgendes:
+
+- Liste mit Lernzielen und den dazugehörigen Lösungen
+- ODT Dokument mit Inhaltsverzeichnis für Android-Folien
+- Script (`join_slides.sh`) zum Generieren der Android-Folienzusammenfassung.
+  PDFjam muss dafür installiert sein. Das Script muss in das Verzeichnis der
+  Android-Folien kopiert und dann gestartet werden.
 
 Lizenz
 ------
 
-Creative Commons BY-NC-SA 3.0 Switzerland, siehe `LICENSE.txt`.
+- Lernziele/Lösungen: Creative Commons BY-NC-SA 3.0 Switzerland, siehe `LICENSE.txt`.
+- Inhaltsverzeichnis: Public Domain
